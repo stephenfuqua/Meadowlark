@@ -46,6 +46,8 @@ jobs:
         run: npm install
 
       - name: Update version to match tag
+        # Temporarily disable
+        if: 1 == 2
         working-directory: eng/version
         run: |
           npm install
