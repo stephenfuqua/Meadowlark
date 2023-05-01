@@ -46,14 +46,10 @@ jobs:
         run: npm install
 
       - name: Update version to match tag
-        # Temporarily disable
-        if: 1 == 2
         working-directory: eng/version
         run: |
           npm install
-          # Temporarily hard-code
-          node ./set.js 0.3.1
-          # node ./set.js ${{ env.REF }}
+          node ./set.js ${{ env.REF }}
 
       - name: Transpile to JS
         run: npm run build --workspaces
