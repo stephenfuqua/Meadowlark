@@ -51,9 +51,7 @@ jobs:
         working-directory: eng/version
         run: |
           npm install
-          # Temporarily hard-code
-          node ./set.js 0.3.1
-          # node ./set.js ${{ env.REF }}
+          node ./set.js ${{ env.REF }}
 
       - name: Transpile to JS
         run: npm run build --workspaces
