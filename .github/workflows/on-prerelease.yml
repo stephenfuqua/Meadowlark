@@ -72,8 +72,8 @@ jobs:
           echo ${{ env.NPM_REGISTRY }}:email=techsupport@ed-fi.org >> $HOME/.npmrc
           echo "; end auth token" >> $HOME/.npmrc
 
-      - name: Publish
         # Temporarily disable
+      #- name: Publish
         # run: npm publish --workspaces --tag dev
         # NOTE: there are uncommitted version number changes in package.json. No
         # problem! Our strategy is to rely on the tag history for version numbers,
