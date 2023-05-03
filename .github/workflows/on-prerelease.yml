@@ -80,6 +80,12 @@ jobs:
         # problem! Our strategy is to rely on the tag history for version numbers,
         # not on package.json.
 
+      - name: Generate hash codes for npm tarballs
+        id: hash-code
+        shell: bash
+        run: |
+          echo "hash-code=$(sha256sum *.tgz | base64 -w0)" >> $GITHUB_OUTPUT
+
       - name: Upload packages as artifacts
         if: success()
         uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce # v3.1.2
