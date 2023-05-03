@@ -36,7 +36,7 @@ jobs:
           #if ($LASTEXITCODE -ne 0) {
           #  throw 'Unable to retrieve version number'
           #}
-          $version = "0.3.0-2"
+          $version = "0.3.0-3"
 
           "Creating pre-release $version" | Out-Host
           $body = @{
