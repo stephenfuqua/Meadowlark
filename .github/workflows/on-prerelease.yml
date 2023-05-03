@@ -199,4 +199,4 @@ jobs:
         id: sbom-hash-code
         shell: bash
         run: |
-          echo "$(cat ./sbom/_manifest/spdx_2.2/manifest.spdx.json.sha256)" >> $GITHUB_OUTPUT
+          iconv -f UTF-16 -t UTF-8 ./sbom/_manifest/spdx_2.2/manifest.spdx.json.sha256 >> $GITHUB_OUTPUT
