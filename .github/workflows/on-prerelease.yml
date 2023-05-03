@@ -255,7 +255,7 @@ jobs:
       contents: write
     uses: Ed-Fi-Alliance-OSS/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@v1.5.0
     with:
-      base64-subjects: ${{ needs.pack.outputs.hash-code }}
+      base64-subjects: ${{ needs.azure-publish.outputs.hash-code }}
       provenance-name: meadowlark.intoto.jsonl
       upload-assets: true
 
