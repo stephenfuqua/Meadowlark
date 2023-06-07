@@ -1,4 +1,4 @@
-# Design for Offline Cascading Deletes
+# Design for Offline Cascading Updates
 
 ## Overview
 
